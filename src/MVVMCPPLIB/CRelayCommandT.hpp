@@ -2,18 +2,47 @@
 #include "IRelayCommandT.hpp"
 
 namespace Command
-{
+{  
+    /// <summary>
+    /// Concrete template implementation of a function-based relay command.
+    /// </summary>
     template<typename T>
     class RelayCommandT :
 	    public IRelayCommandT<T>
     {
+    protected:
+        /// <summary>
+        /// Notifies that the <see cref="ICommand.CanExecute"/> property has changed.
+        /// </summary>
+        void notifyCanExecuteChanged();
+
     public:  
+        /// <summary>
+        /// Defines a function type for the the 'execute' call.
+        /// </summary>
         typedef std::function<void(T parameter)> ExecuteHandler;
+
+        /// <summary>
+        /// Defines a function type for the 'can execute' call.
+        /// </summary>
         typedef std::function<const bool(T parameter)> CanExecuteHandler;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="execute"></param>
+        /// <param name="canExecute"></param>
         RelayCommandT(const ExecuteHandler& execute, const CanExecuteHandler& canExecute);
+
+        /// <summary>
+        /// Destructor.
+        /// </summary>
         ~RelayCommandT();
 
+        /// <summary>
+        /// Returns whether the command can be executed.
+        /// </summary>
+        /// <returns></returns>
         const bool canExecute();
 
         /// <summary>
@@ -23,6 +52,9 @@ namespace Command
         /// <returns></returns>
         const bool canExecute(T parameter);
 
+        /// <summary>
+        /// Triggers the command without arguments.
+        /// </summary>
         void execute();
 
         /// <summary>
@@ -30,8 +62,10 @@ namespace Command
         /// </summary>
         void execute(T parameter);
 
-        void notifyCanExecuteChanged();
-
+        /// <summary>
+        /// Allows objects to subscribe to changes in the 'canExecute' property.
+        /// </summary>
+        /// <param name="eventHandler"></param>
         void subscribeCanExecuteChangedEventHandler(const ICommand::CanExecuteChangedEventHandler& eventHandler);
 
     private:
@@ -39,6 +73,9 @@ namespace Command
         CanExecuteHandler canExecuteHandler;
         ExecuteHandler executeHandler;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         RelayCommandT();
     };
 

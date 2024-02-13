@@ -10,6 +10,9 @@ Messaging::WeakMessenger::WeakMessenger()
 
 Messaging::WeakMessenger* Messaging::WeakMessenger::instance()
 {
+    if (s_instance.get() == nullptr)
+        s_instance.reset(new Messaging::WeakMessenger());
+
     return s_instance.get();
 }
 

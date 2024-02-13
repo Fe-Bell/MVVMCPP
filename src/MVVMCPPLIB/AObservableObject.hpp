@@ -5,6 +5,9 @@
 
 namespace ViewModel
 {
+	/// <summary>
+	/// Defines an abstract, observable, class that can propagate property changed events.
+	/// </summary>
 	class ObservableObject :
 		public INotifyPropertyChanged
 	{
@@ -12,9 +15,20 @@ namespace ViewModel
 		std::vector<PropertyChangedEventHandler> propertyChangedEventHandlers;
 
 	protected:
+		/// <summary>
+		/// Constructor.
+		/// </summary>
 		ObservableObject();
+
+		/// <summary>
+		/// Destructor.
+		/// </summary>
 		virtual ~ObservableObject() {};
 
+		/// <summary>
+		/// Notifies listeners that a property has changed.
+		/// </summary>
+		/// <param name="propertyName"></param>
 		void raisePropertyChanged(const String& propertyName);
 
 	public:

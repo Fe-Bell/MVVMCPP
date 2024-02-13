@@ -54,6 +54,9 @@
     <ClInclude Include="AObservableObject.hpp">
       <Filter>ViewModel</Filter>
     </ClInclude>
+    <ClInclude Include="AViewModelBase.hpp">
+      <Filter>ViewModel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MVVMCPPLIB.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WeakMessenger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AViewModelBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

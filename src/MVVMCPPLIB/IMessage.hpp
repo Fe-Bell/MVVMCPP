@@ -3,6 +3,9 @@
 
 namespace Messaging
 {
+	/// <summary>
+	/// Interface that defines a basic message contract.
+	/// </summary>
 	class IMessage
 	{
 	protected:
@@ -10,8 +13,5 @@ namespace Messaging
 
 	public:
 		virtual ~IMessage() {};
-
-	/*public:
-		virtual const String getType() const = 0;*/
 	};
 }

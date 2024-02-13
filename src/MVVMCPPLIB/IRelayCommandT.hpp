@@ -2,13 +2,23 @@
 #include "IRelayCommand.hpp"
 
 namespace Command
-{
+{ 
+    /// <summary>
+    /// Template interface that provides a high level contract for function-based relay commands. 
+    /// </summary>
     template <typename T>
     class IRelayCommandT :
         public IRelayCommand
     {
     protected:
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         IRelayCommandT() {};
+
+        /// <summary>
+        /// Destructor.
+        /// </summary>
         virtual ~IRelayCommandT() {};
 
     public:

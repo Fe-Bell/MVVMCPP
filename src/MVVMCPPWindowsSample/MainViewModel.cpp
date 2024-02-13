@@ -11,7 +11,7 @@ const bool AppViewModel::MainViewModel::canExecuteTestCommand()
 void AppViewModel::MainViewModel::executeTestCommand()
 {
 	Messaging::WeakMessenger::SafeMessagePtr msg(new BasicMessage());
-	Messaging::WeakMessenger::sendMessage(msg);
+	this->getMessenger()->sendMessage(msg);
 }
 
 AppViewModel::MainViewModel::MainViewModel()

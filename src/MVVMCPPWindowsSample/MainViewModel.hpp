@@ -1,11 +1,11 @@
 #pragma once
-#include "AObservableObject.hpp"
+#include "AViewModelBase.hpp"
 #include "ICommand.hpp"
 
 namespace AppViewModel
 {
 	class MainViewModel :
-		public ViewModel::ObservableObject
+		public ViewModel::ViewModelBase
 	{
 	private:
 		bool state = false;

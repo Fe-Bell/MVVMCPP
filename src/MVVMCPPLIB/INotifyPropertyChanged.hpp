@@ -9,8 +9,6 @@ namespace ViewModel
 	/// </summary>
 	class INotifyPropertyChanged
 	{
-	private:
-
 	public:
 		typedef std::function<void(const String& propertyName)> PropertyChangedEventHandler;
 
@@ -21,7 +19,14 @@ namespace ViewModel
 		virtual void subscribePropertyChangedEvent(const PropertyChangedEventHandler& eventHandler) = 0;
 
 	protected:
+		/// <summary>
+		/// Constructor.
+		/// </summary>
 		INotifyPropertyChanged() {};
+
+		/// <summary>
+		/// Destructor.
+		/// </summary>
 		virtual ~INotifyPropertyChanged() {};
 
 		/// <summary>
