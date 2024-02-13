@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MVVMCPPLIB", "MVVMCPPLIB\MVVMCPPLIB.vcxproj", "{1449BCFE-319F-4B21-A3F2-D32DD848E6D1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MVVMCPPWindowsSample", "MVVMCPPWindowsSample\MVVMCPPWindowsSample.vcxproj", "{AC710ED8-068B-465A-BFE0-CE51493511E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1449BCFE-319F-4B21-A3F2-D32DD848E6D1} = {1449BCFE-319F-4B21-A3F2-D32DD848E6D1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
