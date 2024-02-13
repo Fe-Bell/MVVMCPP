@@ -4,6 +4,12 @@
 bin
 /**/bin
 
+Debug
+/**/Debug
+
+Release
+/**/Release
+
 x64
 /**/x64
 
