@@ -1,8 +1,10 @@
 #include "ViewModelLocator.hpp"
+#include "CBasicIoC.hpp"
 
 AppViewModel::ViewModelLocator::ViewModelLocator()
 {
-	this->mainViewModel = new MainViewModel();
+	DependencyInjection::BasicIoc::instance()
+		->store((std::function<MainViewModel*()>)[]() { return new MainViewModel(); });
 }
 
 AppViewModel::ViewModelLocator::~ViewModelLocator()
@@ -12,5 +14,5 @@ AppViewModel::ViewModelLocator::~ViewModelLocator()
 
 AppViewModel::MainViewModel* AppViewModel::ViewModelLocator::getMainViewModel()
 {
-	return this->mainViewModel;
+	return DependencyInjection::BasicIoc::instance()->acquire<MainViewModel>();
 }

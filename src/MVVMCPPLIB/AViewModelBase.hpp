@@ -1,6 +1,6 @@
 #pragma once
 #include "AObservableObject.hpp"
-#include "WeakMessenger.hpp"
+#include "IMessenger.hpp"
 
 namespace ViewModel
 {
@@ -20,7 +20,7 @@ namespace ViewModel
 		/// Gets the current instance of the messenger.
 		/// </summary>
 		/// <returns></returns>
-		Messaging::WeakMessenger* getMessenger();
+		Messaging::IMessenger* getMessenger();
 
 	public:
 		/// <summary>
