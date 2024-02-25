@@ -144,10 +144,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AViewModelBase.hpp" />
+    <ClInclude Include="CBasicIoC.hpp" />
     <ClInclude Include="CRelayCommandT.hpp" />
     <ClInclude Include="DSharedDef.hpp" />
     <ClInclude Include="ICommand.hpp" />
     <ClInclude Include="IMessage.hpp" />
+    <ClInclude Include="IMessenger.hpp" />
     <ClInclude Include="INotifyPropertyChanged.hpp" />
     <ClInclude Include="IRelayCommand.hpp" />
     <ClInclude Include="AObservableObject.hpp" />
@@ -157,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AViewModelBase.cpp" />
+    <ClCompile Include="CBasicIoC.cpp" />
     <ClCompile Include="WeakMessenger.cpp" />
     <ClCompile Include="MVVMCPPLIB.cpp" />
     <ClCompile Include="AObservableObject.cpp" />

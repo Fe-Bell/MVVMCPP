@@ -22,6 +22,9 @@
     <Filter Include="ViewModel">
       <UniqueIdentifier>{ca6ca191-0ad5-4381-908e-776ccdfcb740}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DependencyInjection">
+      <UniqueIdentifier>{fd3f739b-18e6-4a20-8a3a-6d253b65e579}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DSharedDef.hpp">
@@ -57,6 +60,12 @@
     <ClInclude Include="AViewModelBase.hpp">
       <Filter>ViewModel</Filter>
     </ClInclude>
+    <ClInclude Include="IMessenger.hpp">
+      <Filter>Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasicIoC.hpp">
+      <Filter>DependencyInjection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MVVMCPPLIB.cpp">
@@ -72,6 +81,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AViewModelBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CBasicIoC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

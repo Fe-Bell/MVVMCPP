@@ -1,10 +1,11 @@
 #include "AViewModelBase.hpp"
+#include "WeakMessenger.hpp"
 
 ViewModel::ViewModelBase::ViewModelBase()
 {
 }
 
-Messaging::WeakMessenger* ViewModel::ViewModelBase::getMessenger()
+Messaging::IMessenger* ViewModel::ViewModelBase::getMessenger()
 {
 	return Messaging::WeakMessenger::instance();
 }
