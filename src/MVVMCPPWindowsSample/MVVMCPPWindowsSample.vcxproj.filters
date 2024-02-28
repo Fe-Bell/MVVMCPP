@@ -36,6 +36,9 @@
     <ClInclude Include="BasicMessage.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fCppStringUtils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MVVMCPPWindowsSample.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BasicMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fCppStringUtils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

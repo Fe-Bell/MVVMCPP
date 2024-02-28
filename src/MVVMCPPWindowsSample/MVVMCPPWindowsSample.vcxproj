@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BasicMessage.hpp" />
+    <ClInclude Include="fCppStringUtils.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainViewModel.hpp" />
     <ClInclude Include="MVVMCPPWindowsSample.h" />
@@ -157,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BasicMessage.cpp" />
+    <ClCompile Include="fCppStringUtils.cpp" />
     <ClCompile Include="MainViewModel.cpp" />
     <ClCompile Include="MVVMCPPWindowsSample.cpp" />
     <ClCompile Include="ViewModelLocator.cpp" />

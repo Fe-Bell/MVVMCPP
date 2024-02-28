@@ -1,5 +1,4 @@
 #pragma once
-#include "DSharedDef.hpp"
 
 namespace Messaging
 {
