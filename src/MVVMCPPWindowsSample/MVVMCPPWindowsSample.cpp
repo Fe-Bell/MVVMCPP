@@ -8,6 +8,8 @@
 #include <iostream>
 #include "WeakMessenger.hpp"
 #include "BasicMessage.hpp"
+#include "fCppStringUtils.hpp"
+#include <string.h>
 
 #define MAX_LOADSTRING 100
 
@@ -220,6 +222,21 @@ void onMessageReceived(const Messaging::WeakMessenger::SafeMessagePtr& message)
     BasicMessage* msg = dynamic_cast<BasicMessage*>(message.get());
     if (msg != nullptr)
     {
-        MessageBox(mainWindow, L"Message received!", L"MVVM CPP Lib", MB_OK);
+        const char* content = msg->getContent();
+        if (content != nullptr) {
+            //Format message content
+            std::wstring wstr = L"Message received: " + std::wstring(content, content + strlen(content));
+
+            MessageBox(mainWindow, wstr.c_str(), L"MVVM CPP Lib", MB_OK);
+        }
+        else {
+            //No message content
+            MessageBox(mainWindow, L"Message received!", L"MVVM CPP Lib", MB_OK);
+        }
+
+        return;
     }
+    
+    //The message type was not recognized
+    MessageBox(mainWindow, L"A message was received!", L"MVVM CPP Lib", MB_OK);
 }

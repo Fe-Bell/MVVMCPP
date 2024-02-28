@@ -5,12 +5,17 @@ class BasicMessage :
 	public Messaging::IMessage
 {
 private:
+	char* content = nullptr;
 
 public:
-	BasicMessage() {
+	BasicMessage();
 
-	}
+	BasicMessage(const char* content);
 
-	~BasicMessage(){}
+	BasicMessage(const wchar_t* content);
+
+	~BasicMessage();
+
+	const char* getContent();
 };
 
